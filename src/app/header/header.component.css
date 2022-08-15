@@ -1,0 +1,58 @@
+header{
+    background: white;
+    padding: 0;
+}
+
+a{
+    color: black;
+}
+
+.find-reservation-button {
+    background-color: #fff859;
+    height: 15px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+a:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1em;
+    color: black;
+}
+
+a.logo:hover {
+    color: #fff859;
+    background-color: black;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    width: 200px;
+}
+
+nav ul li a {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    height: 15px
+}

@@ -1,0 +1,23 @@
+<body>
+  <div class="decorative"></div>
+  
+
+    <div>
+        <img src="{{car.image}}" alt="" class="car-image">
+        <div class="information-container">
+          <span class="nombre-carro">{{ car.car_name }}</span>
+          <div class="extra-information-container" style="display: flex; flex-direction: column;">
+            <span class="seats">Seats: {{ car.seats }}</span>
+            <span class="class">Standard</span>
+            <span class="class">From: {{ this.fromDate }}</span>
+            <span class="class">To: {{ this.toDate }}</span>
+            <span class="class">Username: {{this.username}}</span>
+            <span class="price">Total: $ {{ this.totalPrice }}</span>
+            <button (click)="addReservation()" class="pick-up-button">Book car</button>
+          </div>
+        </div>
+      </div>
+      <span *ngIf="this.reservation != null" class="reservation-code">Reservation code: {{this.reservationCode }}</span>
+      
+</body>
+

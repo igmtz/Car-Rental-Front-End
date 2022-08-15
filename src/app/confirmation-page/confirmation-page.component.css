@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-image {
+    height: 300px;
+    width: 550px;
+    border-radius: 50px;
+}
+
+button {
+    padding: 7px 25px;
+    border: unset;
+    border-radius: 10px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    width: 400px;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+    cursor: pointer;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 300px;
+}
+
+.extra-information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.nombre-carro {
+    text-align:left;
+vertical-align:text-top;
+font-size:35px;
+font-family:Geometr212 BkCn BT;
+line-height: auto;
+color:#000000;
+}
+
+.reservation-code {
+    text-align:left;
+vertical-align:text-top;
+font-size:35px;
+font-family:Geometr212 BkCn BT;
+line-height: auto;
+color:#000000;
+}
+
+.decorative {
+width:100%;
+height:450px;
+background-color:#fff858;
+top:200px;
+left:0px;
+position:absolute;
+z-index: -1;
+}

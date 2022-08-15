@@ -1,0 +1,41 @@
+<body>
+  <div class="decorative"></div>
+
+  <div>
+
+    <form (ngSubmit)="findReservationByCode()">
+      <div class="form-group">
+          <div class="textInputWrapper">
+            <input placeholder="Reservation code" class="textInput" type="text" id="code" name="code" [(ngModel)]="code" required>
+          </div>
+      </div>
+      <div class="button-container">
+        <button class="btn btn-outline-success btn-block" >Search</button>
+      </div>
+  </form>
+  <div class="general-display">
+    
+    <div *ngIf="codeSelected != ''" class="information-container">
+      <img src="{{car.image}}" alt="" class="car-image">
+
+      <span class="nombre-carro">{{car.car_name}}</span>
+      <div class="extra-information-container" style="display: flex; flex-direction: column;">
+        <span class="seats">Seats: {{ car.seats }}</span>
+        <span class="class">From: {{ reservation.from_date }}</span>
+        <span class="class">To: {{ reservation.to_date }}</span>
+        <span class="class">Username: {{ user.username }}</span>
+        <span class="price">Total: $ {{ reservation.total_price }}</span>
+        <span class="reservation-code">Reservation code: {{ reservation.reservation_code}}</span>
+      </div>
+
+      <div class="buttons-container">
+        <button *ngIf="codeSelected != ''" (click)="pickUpCar()" class="pick-up-button">Pick Up</button>
+      <button *ngIf="codeSelected != ''" (click)="returnCar()" class="return-button">Return</button>
+      </div>
+      
+    </div>
+  </div>
+    
+  </div>
+  
+</body>
